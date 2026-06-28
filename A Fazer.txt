@@ -1,0 +1,1 @@
+Impedir que o registrar/perfil aceitem CPF e CEP incompletos.

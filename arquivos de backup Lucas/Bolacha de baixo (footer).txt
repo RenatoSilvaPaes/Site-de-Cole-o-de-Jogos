@@ -1,0 +1,11 @@
+<footer class="bg-dark text-secondary text-center py-3 mt-auto">
+            <div class="container">
+                <p class="mb-0 small text-light">Custom Collection &copy;
+                    <?= date('Y') ?><br><a href="sobre.php" class="fw-bold text-info mb-0">Desenvolvido por: Lucas Stoppa |
+                        Samuel Lucas | Renato Paes</a>
+                </p>
+                <p class="mt-0 small">
+                    <a href="politica.php" class="fw-bold text-info">Política de Privacidade</a>
+                </p>
+            </div>
+        </footer>

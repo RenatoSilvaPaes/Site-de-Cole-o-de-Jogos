@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Aula de Web">
+        <meta name="keywords" content="PHP, SQL">
+        <meta name="author" content="PC Self-Custom">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="estilo.css" type="text/css">
+        <title>Perfil de Usuário</title>
+    </head>
+
+    <body class="bg-light d-flex flex-column min-vh-100">
+        <div>
+            <canvas id="grafico"></canvas>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            const contexto = document.getElementById('grafico');
+
+            new Chart(contexto, {
+                type: 'bar',
+                data: {
+                    labels: ['Amora', 'Banana', 'Morango', 'Uva', 'Laranja', 'Cereja'],
+                    datasets: [{
+                        label: 'Quantidade de Caixas',
+                        data: [4, 6, 12, 11, 10, 2],
+                        borderColor: 'green',
+                        // backgroundColor: 'lightblue',
+                        backgroundColor: ['red', '#ffb703', 'orange', 'purple', 'rgba(100, 150, 22, 0.7)', '#d00000'],
+                        borderWidth: 2,
+                        hoverBorderColor: 'red'
+                    }]
+
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                            display: true,
+                            text: 'Produção de Frutas Mensal (em caixas)',
+                            font: {
+                                size: 18
+                            }
+                        }
+                    }
+                },
+                plugins: []
+            });
+        </script>
+    </body>
+</html>
